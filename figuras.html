@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4b3f15bb31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>
+        <a href="index.html">JavaScript</a> 
+    </h1>
+    <nav class="header__nav">
+        <ul>
+            <li class="header__nav--activo"><a href="./figuras.html">Geometric figures</a></li>
+            <li><a href="./prices-discounts.html">Prices and discounts</a></li>
+            <li><a href="./average-mode-median.html">Average, mode and median</a></li>
+            <li><a href="/salary.html">Salary analysis</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="contenedor">
+  <section class="form ventana01">
+    <span class="ventana01__icono form__icono"><i class="fas fa-vector-square"></i></span>
+    <h2 class="titulos titulos--ventana01">calculate the area and perimeter of a square</h2>
+    <form class="form-input">
+      <input class="form-input__input" id="InputCuadrado" type="number" placeholder="Enter one side"/>
+      <button class="form-input__button" type="button" onclick="calcularCuadrado()">
+        calculate
+      </button>
+    </form>
+    <span id="res-area" class="respuesta respuesta--ventana01"></span>
+    <span id="res-perimetro" class="respuesta respuesta--ventana01"></span>
+  </section>
+  <section class="form ventana02">
+    <span class="ventana02__icono form__icono"><i class="fas fa-exclamation-triangle"></i></span>
+    <h2 class="titulos titulos--ventana02">Calculate the area and perimeter of a triangle</h2>
+    <form class="form-input">
+      <input class="form-input__input" id="lado01" type="number" placeholder="Enter side 01"/>
+      <input class="form-input__input" id="lado02" type="number" placeholder="Enter side 02"/>
+      <input class="form-input__input" id="base" type="number" placeholder="Enter base"/>
+      <input class="form-input__input" id="altura" type="number" placeholder="Enter height"/>
+      <button class="form-input__button" type="button" onclick="calcularTriangulo()">
+        calculate
+      </button>
+    </form>
+    <span id="res-area-triangulo" class="respuesta respuesta--ventana02"></span>
+    <span id="res-perimetro-triangulo" class="respuesta respuesta--ventana02"></span>
+  </section>
+  <section class="form ventana03">
+    <span class="ventana03__icono form__icono"><i class="fas fa-circle-notch"></i></span>
+    <h2 class="titulos titulos--ventana03">Calculate the area and perimeter of a circle</h2>
+    <form class="form-input">
+      <input class="form-input__input" id="radio" type="number" placeholder="Enter Radius"/>
+      <button class="form-input__button" type="button" onclick="calcularcirculo()">
+        calculate
+      </button>
+    </form>
+    <span id="res-diametro-circulo" class="respuesta respuesta--ventana03"></span>
+    <span id="res-perimetro-circulo" class="respuesta respuesta--ventana03"></span>
+    <span id="res-area-circulo" class="respuesta respuesta--ventana03"></span>
+  </section>
+</div>
+
+  <script src="./figuras.js"></script>
+</body>
+</html>
