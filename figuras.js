@@ -18,6 +18,14 @@ function areaTriangulo(base,altura){
     return (base*altura) / 2;
 }
 
+function alturaTriangulo(lado1,lado2,base){
+    if(lado1 === lado2 && lado1 != base){
+        return Math.sqrt(Math.pow(lado1,2)-Math.pow(base/2,2));
+    }else{
+        return "No Corresponde a un Triangulo Isóseles";
+    }
+}
+
 
 //Código del Circulo----------------
 
@@ -64,9 +72,11 @@ function calcularCuadrado() {
 
     const resperimetroTriangulo = perimetroTriangulo(lado01,lado02,base);
     const areatriangulo = areaTriangulo(base,altura);
+    const alturatriangulo = alturaTriangulo(lado01,lado02,base);
 
     document.getElementById("res-perimetro-triangulo").innerHTML = "Perimeter of the triangle: "+resperimetroTriangulo;
     document.getElementById("res-area-triangulo").innerHTML = "Triangle area: "+areatriangulo;
+    document.getElementById("res-altura-triangulo").innerHTML = alturatriangulo;
   }
   
   //Circulo
