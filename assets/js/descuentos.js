@@ -2,13 +2,13 @@
 // const descuento = 18;
 
 const coupons = [
-    "SECRETO",
-    "MADMAX",
-    "JAVASCRIPT",
+    "YODA",
+    "MANDALORIAN",
+    "JEDI",
 ];
 
-function calcularPrecioConDescuento(precio, descuento){
-    const porcentajePrecioConDescuento = 100 - descuento;
+function calcularPrecioConDescuento(precio, descuento,cupon){
+    const porcentajePrecioConDescuento = 100 - (parseInt(descuento)+parseInt(cupon));
     const precioConDescuento = (precio*porcentajePrecioConDescuento)/100;
 
     return precioConDescuento;
@@ -16,46 +16,35 @@ function calcularPrecioConDescuento(precio, descuento){
 
 
 function onClickButtonPriceDiscount(){
-    const inputPrice = document.getElementById("InputPrice");
-    const inputDiscount = document.getElementById("InputDiscount");
+    const inputPrice = document.getElementById("price");
+    const inputDiscount = document.getElementById("discount");
+    const inputCoupon = document.getElementById("coupon");
     const priceValue = inputPrice.value;
     const discountvalue = inputDiscount.value;
-
-    const precioConDescuento = calcularPrecioConDescuento(priceValue,discountvalue);
-
-    const resultP = document.getElementById("ResultP");
-    resultP.innerText="El precio con descuento es: $" + precioConDescuento;
-
-}
-
-function onClickButtonPriceCoupon() {
-    const inputPrice = document.getElementById("InputPriceCoupon");
-    const priceValue = inputPrice.value;
-    
-    const inputCoupon = document.getElementById("InputCoupon");
     const couponValue = inputCoupon.value;
-  
-    let descuento;
+
+    let descuentoCoupon=0;
   
     switch(couponValue) {
-      case "SECRETO":
-        descuento = 15;
+      case "YODA":
+        descuentoCoupon = 15;
       break;
-      case "MADMAX":
-        descuento = 30;
+      case "MANDALORIAN":
+        descuentoCoupon = 30;
       break;
-      case "JAVASCRIPT":
-        descuento = 25;
+      case "JEDI":
+        descuentoCoupon = 25;
       break;
     }
-  
-  
-    const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
-  
-    const resultP = document.getElementById("ResultPCoupon");
-    resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
-  }
 
+    const montoDescuento= (priceValue * discountvalue) / 100;
+    const montoDescuentoCoupon= (priceValue * descuentoCoupon) / 100;
+
+    const precioConDescuento = calcularPrecioConDescuento(priceValue,discountvalue,descuentoCoupon);
+
+    document.getElementById("res-precio").innerHTML ="Price : $" + priceValue+"\nDiscount : $"+montoDescuento+"\nCoupon : $"+montoDescuentoCoupon+"\nFinal Price : $"+precioConDescuento;
+
+}
 
 
 // console.log({

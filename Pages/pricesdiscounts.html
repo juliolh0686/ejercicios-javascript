@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b3f15bb31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="header__logo">JavaScript</a>
+            <button class="nav-toggle" aria-label="Abrir Menú"><i class="fas fa-bars"></i></button>
+            <nav class="header__menu">
+                <li class="menu-item"><a class="menu-link" href="../index.html">Home</a></li>
+                <li class="menu-item"><a class="menu-link" href="../Pages/Geometricfigures.html">Geometric Figures</a></li>
+                <li class="menu-item"><a class="menu-link menu-link_active" href="../Pages/pricesdiscounts.html">Prices and Discounts</a></li>
+                <li class="menu-item"><a class="menu-link" href="../Pages/averagemodemedian.html">Average, Mode and Median</a></li>
+                <li class="menu-item"><a class="menu-link" href="../Pages/salaryanalysis.html">Salary Analysis</a></li>
+            </nav>
+        </header>
+        <section class="menu-right">
+            <h1 class="menu-right__titulo">Curso Practico
+                de JavaScript</h1>
+            <nav class="menu-right__nav">
+                <ul>
+                    <li><i class="fas fa-home"></i><a href="../index.html">Home</a></li>
+                    <li><i class="fas fa-shapes"></i><a href="../Pages/Geometricfigures.html">Geometric Figures</a></li>
+                    <li class="active-menu"><i class="fas fa-tags"></i><a href="../Pages/pricesdiscounts.html">Prices and discounts</a></li>
+                    <li><i class="fas fa-calculator"></i><a href="../Pages/averagemodemedian.html">Average, mode and Median</a></li>
+                    <li><i class="fas fa-hand-holding-usd"></i><a href="../Pages/salaryanalysis.html">Salary analysis</a></li>
+                </ul>
+            </nav>
+            <div class="menu-right__copiryght">
+                <h2>Julio Loarte</h2>
+                <div class="menu-right__copiryght--iconos">
+                   <a href="https://github.com/juliolh0686/ejercicios-javascript" target="_blank"><i class="fab fa-github"></i></a>
+                   <a href="https://www.linkedin.com/in/juliolh06/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="principal">
+            <section class="encabezado">
+                <h1 class="principal__titulo">Prices and Discounts</h1>
+                <i class="fas fa-tags"></i>
+            </section>
+            <section class="cards">
+                <section class="cardform">
+                    <h2 class="cardform__title">Calculate the Price to Pay of Your Discounted Products</h2>
+                    <label class="cardform__label" for="price">Enter the Price:</label>
+                    <input class="cardform__input" type="number" value="" id="price">
+                    <label class="cardform__label" for="discount">Enter the discount %:</label>
+                    <input class="cardform__input" type="number" value="" id="discount">
+                    <label class="cardform__label" for="coupon">Enter coupon:</label>
+                    <input class="cardform__input" type="text" value="" id="coupon">
+                    <button class="cardform__button" onclick="onClickButtonPriceDiscount()"><span>calculate</span><i class="fas fa-arrow-circle-right"></i></button>
+                    <label class="cardform__label" for="res-triangle">Result:</label>
+                    <textarea class="cardform__resultado" name="" id="res-precio" cols="30" rows="10"></textarea>
+                </section>
+                <section class="cardinfo">
+                    <h2 class="cardinfo__title">Codigo de Cupones:</h2>
+                    <p>YODA : 15%</p>
+                    <p>MANDALORIAN : 30%</p>
+                    <p>JEDI : 25%</p>
+                </section>
+            </section>
+        </section>
+        <footer class="footer">
+            <a class="footer__logo" href="">Julio Loarte</a>
+            <div class="footer__iconos">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </footer>
+    </div>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/descuentos.js"></script>
+</body>
+</html>

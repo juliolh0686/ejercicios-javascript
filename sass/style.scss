@@ -1,0 +1,458 @@
+$color-fondo: #F9FAFC;
+$color-texto01: #747474;
+$color-primary: #F7CB15;
+$color-secundary: #8C62AA;
+$color-ternary: #76BED0;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color:$color-fondo;
+    font-size: 2.5rem;
+}
+
+.header{
+    background-color: $color-fondo;
+    -webkit-box-shadow: 0px 2px 4px 0px #D7CDCD; 
+    box-shadow: 0px 2px 4px 0px #D7CDCD;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    height: 50px;
+    align-items: center;
+    &__logo{
+        text-decoration: none;
+        color: $color-texto01;
+        font-weight: bold;
+    }
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        background-color: $color-fondo;
+        position: fixed;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        height: calc(100% - 50px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    & .menu-item{
+        font-size: 1.8rem;
+        margin: 0 10px;
+        line-height: 70px;
+        width: max-content;
+    }
+    & .menu-link{
+        padding: 8px 12px;
+        border-radius: 3px;
+        color: $color-secundary;
+        text-decoration: none;
+        &:hover, &_active{
+            background: none;
+            background-color: $color-primary;
+            border-radius: 15px;
+            padding: 10px 25px;
+        }
+    }
+    & .nav-toggle{
+        width: 40px;
+        height: 40px;
+        color: $color-texto01;
+        font-size: 20px;
+        background-color: $color-fondo;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+
+.nav-toggle:hover{
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.nav-menu_visible{
+    left: 0;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardform{
+    background-color: white;
+    width: 85%;
+    margin: 0 auto;
+    border-left: 9px solid $color-primary;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 2px 4px 0px #D7CDCD; 
+    box-shadow: 0px 2px 4px 0px #D7CDCD;
+    padding: 15px;
+    text-align: center;
+    max-width: 300px;
+    margin-bottom: 30px;
+    &__title{
+        color: $color-secundary;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    &__label{
+        color: $color-secundary;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 500;
+        display: block;
+        margin: 15px 0;
+    }
+    &__input{
+        border: 2px solid $color-secundary;
+        color: $color-secundary;
+        height: 40px;
+        border-radius: 15px;
+        display: block;
+        margin: 0 auto;
+        outline:none;
+        padding: 0 15px;
+        width: 168px;
+        &:focus{
+            border: 2px solid $color-primary;
+        }
+    }
+    &__button{
+        background-color: $color-primary;
+        border: solid 2px $color-secundary;
+        color: $color-secundary;
+        height: 40px;
+        width: 168px;
+        border-radius: 15px;
+        display: flex;
+        margin: 15px auto;
+        font-weight: 700;
+        padding: 0px 15px;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        & i{
+            font-size: 25px;
+        }
+        & span{
+            width: 100%;
+            text-align: center;
+        }
+        &:hover{
+            color:$color-fondo;
+            background-color: $color-secundary;
+        }
+        &:active {
+            background-color: $color-primary;
+            color: $color-secundary;
+        }
+    }
+    &__resultado{
+        border: solid 2px $color-secundary;
+        border-radius: 15px;
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 100px;
+        outline:none;
+        padding: 10px 15px;
+        color: $color-secundary;
+    }
+}
+
+.footer{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: $color-primary;
+    align-items: center;
+    width: 100%;
+    &__logo{
+        color: $color-secundary;
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    &__iconos{
+        color: $color-secundary;
+        font-size: 30px;
+    }
+}
+
+.menu-right{
+    display: none;
+}
+
+.encabezado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    & h1 {
+        font-size: 3rem;
+        color: $color-secundary;
+    }
+    & i {
+        display: none;
+    }
+}
+
+.button-principal{
+        background-color: $color-primary;
+        border: solid 2px $color-secundary;
+        color: $color-secundary;
+        height: 50px;
+        text-decoration: none;
+        width: 80%;
+        border-radius: 15px;
+        font-size: 15px;
+        display: flex;
+        margin: 15px auto;
+        font-weight: 700;
+        padding: 0px 15px;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        & i{
+            font-size: 25px;
+        }
+        & span{
+            width: 100%;
+            text-align: center;
+        }
+        &:hover{
+            color:$color-fondo;
+            background-color: $color-secundary;
+        }
+        &:active {
+            background-color: $color-primary;
+            color: $color-secundary;
+        }
+}
+
+.titulo-principal{
+    width: 80%;
+    text-align: center;
+}
+
+.footer-principal{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+.cardinfo{
+    background-color: #EEEBF2;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 320px;
+    font-size: 1.5rem;
+    width: 85%;
+    margin-bottom: 10px;
+    &__title{
+        font-size: 1.5rem;
+        color: $color-secundary;
+        margin-bottom: 20px;
+    } p {
+        color: #949298;
+    }
+}
+
+
+@media only screen and (min-width: 900px){
+    .cards{
+        display: flex;
+    }
+
+    .footer{
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .cards{
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .cardform{
+        max-width: 320px;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+
+    .container{
+        display: flex;
+    }
+
+    .active-menu{
+        background-color: $color-primary;
+        border-radius: 15px;
+    }
+
+    .menu-right{
+        display: block;
+        height: 100vh;
+        width: 25%;
+        padding: 15px 15px 15px 24px;
+        background-color: white;
+        &__titulo{
+            font-size: 3rem;
+            color: $color-secundary;
+            margin-top: 70px;
+        }
+        &__nav{
+            width: 100%;
+            margin-top: 80px;
+            & ul li{
+                list-style: none;
+                height: 65px;
+                font-size: 18px;
+                line-height: 65px;
+                padding: 0 5px;
+                cursor: pointer;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                &:hover{
+                    background-color: $color-primary;
+                    border-radius: 15px;
+                    color: $color-secundary;
+                }
+            }
+            & ul li i {
+                margin-right: 20px;
+                color: $color-secundary;
+            }
+            & ul li a {
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: $color-texto01;
+            }
+        }
+        &__copiryght {
+            background-color: $color-fondo;
+            border-radius: 15px;
+            height: 200px;
+            margin-top: 15px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & h2{
+                color: $color-secundary;
+                font-size: 20px;
+                margin: 15px 0;
+            }
+            &--iconos{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                & a {
+                    text-decoration: none;
+                    color: $color-secundary;
+                    &:hover{
+                        color: $color-ternary;
+                    }
+                }
+                & i {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+    .header{
+        display: none;
+    }
+
+    .footer{
+        display: none;
+    }
+    
+    .cards{
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-content: flex-start;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .cardform{
+        max-width: 320px;
+        margin: 0;
+    }
+
+    .principal{
+        width: 80%;
+    }
+
+    .encabezado{
+        background-color: white;
+        height: 196px;
+        width: 93%;
+        margin: 30px auto;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 2px 4px 0px #D7CDCD; 
+        box-shadow: 0px 2px 4px 0px #D7CDCD;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        & h1 {
+            text-align: left;
+            font-size: 3rem;
+        }
+        & i {
+            display: block;
+            font-size: 100px;
+            color: $color-secundary;
+        }
+    }
+    .cardinfo{
+        background-color: #EEEBF2;
+        border-radius: 15px;
+        padding: 25px;
+        max-width: 320px;
+        font-size: 1.5rem;
+        width: 85%;
+        &__title{
+            font-size: 1.5rem;
+            color: $color-secundary;
+            margin-bottom: 20px;
+        } p {
+            color: #949298;
+        }
+    }
+    
+
+  }

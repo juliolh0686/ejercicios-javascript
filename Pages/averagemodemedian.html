@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b3f15bb31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="header__logo">JavaScript</a>
+            <button class="nav-toggle" aria-label="Abrir Menú"><i class="fas fa-bars"></i></button>
+            <nav class="header__menu">
+                <li class="menu-item"><a class="menu-link" href="../index.html">Home</a></li>
+                <li class="menu-item"><a class="menu-link" href="../Pages/Geometricfigures.html">Geometric Figures</a></li>
+                <li class="menu-item"><a class="menu-link" href="../Pages/pricesdiscounts.html">Prices and Discounts</a></li>
+                <li class="menu-item"><a class="menu-link menu-link_active" href="../Pages/averagemodemedian.html">Average, Mode and Median</a></li>
+                <li class="menu-item"><a class="menu-link" href="../Pages/salaryanalysis.html">Salary Analysis</a></li>
+            </nav>
+        </header>
+        <section class="menu-right">
+            <h1 class="menu-right__titulo">Curso Practico
+                de JavaScript</h1>
+            <nav class="menu-right__nav">
+                <ul>
+                    <li><i class="fas fa-home"></i><a href="../index.html">Home</a></li>
+                    <li><i class="fas fa-shapes"></i><a href="../Pages/Geometricfigures.html">Geometric Figures</a></li>
+                    <li><i class="fas fa-tags"></i><a href="../Pages/pricesdiscounts.html">Prices and discounts</a></li>
+                    <li class="active-menu"><i class="fas fa-calculator"></i><a href="../Pages/averagemodemedian.html">Average, mode and Median</a></li>
+                    <li><i class="fas fa-hand-holding-usd"></i><a href="../Pages/salaryanalysis.html">Salary analysis</a></li>
+                </ul>
+            </nav>
+            <div class="menu-right__copiryght">
+                <h2>Julio Loarte</h2>
+                <div class="menu-right__copiryght--iconos">
+                   <a href="https://github.com/juliolh0686/ejercicios-javascript" target="_blank"><i class="fab fa-github"></i></a>
+                   <a href="https://www.linkedin.com/in/juliolh06/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="principal">
+            <section class="encabezado">
+                <h1 class="principal__titulo">Average, Mode and Median</h1>
+                <i class="fas fa-calculator"></i>
+            </section>
+            <section class="cards">
+                <section class="cardform">
+                    <h2 class="cardform__title">Add elements to array</h2>
+                    <label class="cardform__label" for="add-item">Enter Element:</label>
+                    <input class="cardform__input" type="number" value="" id="add-item">
+                    <button class="cardform__button" onclick="addItem()"><span>Add</span><i class="fas fa-arrow-circle-right"></i></button>
+                    <h2 class="cardform__title">Delete elements from array</h2>
+                    <label class="cardform__label" for="delete-item">Enter element index :</label>
+                    <input class="cardform__input" type="number" value="" id="delete-item">
+                    <button class="cardform__button" onclick="deleteItem()"><span>Delete</span><i class="fas fa-arrow-circle-right"></i></button>
+                </section>
+                <section class="cardinfo" id="numeros_array">
+                    <h2 class="cardinfo__title">Item List:</h2>
+                </section>
+                <section class="cardform">
+                    <h2 class="cardform__title">Calculate</h2>
+                    <button class="cardform__button" onclick="calcularMediaAritmetica(numeros)"><span>Average</span><i class="fas fa-arrow-circle-right"></i></button>
+                    <button class="cardform__button" onclick="calcularMediana(numeros)"><span>Median</span><i class="fas fa-arrow-circle-right"></i></button>
+                    <button class="cardform__button" onclick="calcularModa(numeros)"><span>Mode</span><i class="fas fa-arrow-circle-right"></i></button>
+                    <label class="cardform__label" for="res-triangle">Result:</label>
+                    <textarea class="cardform__resultado" name="" id="res-media" cols="30" rows="10"></textarea>
+                </section>
+                <section class="cardform">
+                    <h2 class="cardform__title">averages</h2>
+                    <button class="cardform__button" onclick="calcularcirculo()"><span>weighted</span><i class="fas fa-arrow-circle-right"></i></button>
+                    <button class="cardform__button" onclick="calcularPromedioGeometrico(numeros)"><span>geometric</span><i class="fas fa-arrow-circle-right"></i></button>
+                    <label class="cardform__label" for="res-circle">Result:</label>
+                    <textarea class="cardform__resultado" name="" id="res-averages" cols="30" rows="10"></textarea>
+                </section>
+            </section>
+        </section>
+        <footer class="footer">
+            <a class="footer__logo" href="">Jlio Loarte</a>
+            <div class="footer__iconos">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </footer>
+    </div>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/promedio.js"></script>
+    <script src="../assets/js/mediana.js"></script>
+    <script src="../assets/js/moda.js"></script>
+    <script src="../assets/js/promediogeometrico.js"></script>
+</body>
+</html>

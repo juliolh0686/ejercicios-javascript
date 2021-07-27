@@ -51,45 +51,39 @@ function areaCirculo(radio){
 // Aquí interactuamos con el HTML
 //Cuadrado
 function calcularCuadrado() {
-    const input = document.getElementById("InputCuadrado");
+    const input = document.getElementById("side-square");
     const value = input.value;
   
     const perimetro = perimetroCuadrado(value);
     const area = areaCuadrado(value);
 
-    document.getElementById("res-perimetro").innerHTML = "Perimeter of the square: "+perimetro;
-    document.getElementById("res-area").innerHTML = "Square area: "+area;
-
+    document.getElementById("res-square").innerHTML = "Perimeter: "+perimetro + "m\nArea: "+area+" m2";
   }
 
   //Triangulo
 
   function calcularTriangulo() {
-    const lado01 = parseInt(document.getElementById("lado01").value);
-    const lado02 = parseInt(document.getElementById("lado02").value);
-    const base = parseInt(document.getElementById("base").value);
-    const altura = parseInt(document.getElementById("altura").value);
+    const lado01 = parseInt(document.getElementById("side1-triangle").value);
+    const lado02 = parseInt(document.getElementById("side2-triangle").value);
+    const base = parseInt(document.getElementById("base-triangle").value);
+    const altura = parseInt(document.getElementById("height-triangle").value);
 
     const resperimetroTriangulo = perimetroTriangulo(lado01,lado02,base);
     const areatriangulo = areaTriangulo(base,altura);
     const alturatriangulo = alturaTriangulo(lado01,lado02,base);
 
-    document.getElementById("res-perimetro-triangulo").innerHTML = "Perimeter of the triangle: "+resperimetroTriangulo;
-    document.getElementById("res-area-triangulo").innerHTML = "Triangle area: "+areatriangulo;
-    document.getElementById("res-altura-triangulo").innerHTML = alturatriangulo;
+    document.getElementById("res-triangle").innerHTML = "Perimeter : "+resperimetroTriangulo+"\nArea : "+areatriangulo+"\nHeight : "+alturatriangulo;
   }
   
   //Circulo
 
   function calcularcirculo() {
-    const radio = parseInt(document.getElementById("radio").value);
+    const radio = parseInt(document.getElementById("radio-circle").value);
 
     const resdiametrocirculo = diametroCirculo(radio);
     const resperimetrocirculo = perimetroCirculo(radio);
     const areacirculo = areaCirculo(radio);
 
-    document.getElementById("res-diametro-circulo").innerHTML = "Circle diameter: "+resdiametrocirculo;
-    document.getElementById("res-perimetro-circulo").innerHTML = "Circle perimeter: "+resperimetrocirculo;
-    document.getElementById("res-area-circulo").innerHTML = "Circle area: "+areacirculo;
+    document.getElementById("res-circle").innerHTML = "Diameter: "+resdiametrocirculo+"\nPerimeter : "+resperimetrocirculo.toFixed(4)+"\nArea : "+areacirculo.toFixed(4);
   }
   

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Documento</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +10,58 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4b3f15bb31.js" crossorigin="anonymous"></script>
-    <title>JavaScript</title>
 </head>
 <body>
-<header class="header">
-    <h1>
-        <a href="index.html">JavaScript</a>
-    </h1>
-    <nav class="header__nav">
-        <ul>
-            <li><a href="./figuras.html">Geometric figures</a></li>
-            <li><a href="./prices-discounts.html">Prices and discounts</a></li>
-            <li><a href="./average-mode-median.html">Average, mode and median</a></li>
-            <li><a href="./salary.html">Salary analysis</a></li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-    <a class="button-principal color-button-01" href="./figuras.html">Geometric Figures</a>
-    <a class="button-principal color-button-02" href="./prices-discounts.html">Prices and discounts</a>
-    <a class="button-principal color-button-03" href="./average-mode-median.html">Average, mode and median</a>
-    <a class="button-principal color-button-01" href="./salary.html">Salary analysis</a>
-</main>
-    
+    <div class="container">
+        <header class="header">
+            <a href="#" class="header__logo">JavaScript</a>
+            <button class="nav-toggle" aria-label="Abrir Menú"><i class="fas fa-bars"></i></button>
+            <nav class="header__menu">
+                <li class="menu-item"><a class="menu-link menu-link_active" href="./index.html">Home</a></li>
+                <li class="menu-item"><a class="menu-link" href="./Pages/Geometricfigures.html">Geometric Figures</a></li>
+                <li class="menu-item"><a class="menu-link" href="./Pages/pricesdiscounts.html">Prices and Discounts</a></li>
+                <li class="menu-item"><a class="menu-link" href="./Pages/averagemodemedian.html">Average, Mode and Median</a></li>
+                <li class="menu-item"><a class="menu-link" href="./Pages/salaryanalysis.html">Salary Analysis</a></li>
+            </nav>
+        </header>
+        <section class="menu-right">
+            <h1 class="menu-right__titulo">Curso Practico
+                de JavaScript</h1>
+            <nav class="menu-right__nav">
+                <ul>
+                    <li class="active-menu"><i class="fas fa-home"></i><a href="./index.html">Home</a></li>
+                    <li><i class="fas fa-shapes"></i><a href="./Pages/Geometricfigures.html">Geometric Figures</a></li>
+                    <li><i class="fas fa-tags"></i><a href="./Pages/pricesdiscounts.html">Prices and discounts</a></li>
+                    <li><i class="fas fa-calculator"></i><a href="./Pages/averagemodemedian.html">Average, mode and Median</a></li>
+                    <li><i class="fas fa-hand-holding-usd"></i><a href="./Pages/salaryanalysis.html">Salary analysis</a></li>
+                </ul>
+            </nav>
+            <div class="menu-right__copiryght">
+                <h2>Julio Loarte</h2>
+                <div class="menu-right__copiryght--iconos">
+                   <a href="https://github.com/juliolh0686/ejercicios-javascript" target="_blank"><i class="fab fa-github"></i></a>
+                   <a href="https://www.linkedin.com/in/juliolh06/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="principal">
+            <section class="encabezado">
+                <h1 class="titulo-principal">Curso Practico
+                    de JavaScript</h1>
+            </section>
+            <a href="./Pages/Geometricfigures.html" class="button-principal">Geometric Figures<i class="fas fa-shapes"></i></a>
+            <a href="./Pages/pricesdiscounts.html" class="button-principal">Prices and Discounts<i class="fas fa-tags"></i></a>
+            <a href="./Pages/averagemodemedian.html" class="button-principal">Average, Mode and Median<i class="fas fa-calculator"></i></a>
+            <a href="./Pages/salaryanalysis.html" class="button-principal">Salary Analysis<i class="fas fa-hand-holding-usd"></i></a>
+        </section>
+        <footer class="footer footer-principal">
+            <a class="footer__logo" href="">Julio Loarte</a>
+            <div class="footer__iconos">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/menu.js"></script>
 </body>
 </html>
