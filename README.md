@@ -1,6 +1,6 @@
 # ejercicios-javascript
 
-...
+![Home](https://raw.githubusercontent.com/juliolh0686/ejercicios-javascript/main/home.jpg)
 
 ## Taller #1: Figuras geometricas
 
