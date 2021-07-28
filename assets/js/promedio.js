@@ -22,13 +22,20 @@ recargarLista();
 
 //Agregar Elemento al Array
 function addItem(){
-    numeros.push(parseInt(document.getElementById("add-item").value));
-    recargarLista();
+    let elemento = document.getElementById("add-item").value;
+
+    if(elemento){
+        numeros.push(parseInt(elemento));
+        recargarLista();
+      }
 }
 
 function deleteItem(){
-    numeros.splice(parseInt(document.getElementById("delete-item").value), 1);
-    recargarLista();
+    let elemento = document.getElementById("delete-item").value;
+    if(elemento){
+        numeros.splice(parseInt(elemento), 1);
+        recargarLista();
+    }
 }
 
 //----Media

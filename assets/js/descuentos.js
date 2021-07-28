@@ -19,7 +19,7 @@ function onClickButtonPriceDiscount(){
     const inputPrice = document.getElementById("price");
     const inputDiscount = document.getElementById("discount");
     const inputCoupon = document.getElementById("coupon");
-    const priceValue = inputPrice.value;
+    let priceValue = inputPrice.value;
     const discountvalue = inputDiscount.value;
     const couponValue = inputCoupon.value;
 
@@ -40,7 +40,24 @@ function onClickButtonPriceDiscount(){
     const montoDescuento= (priceValue * discountvalue) / 100;
     const montoDescuentoCoupon= (priceValue * descuentoCoupon) / 100;
 
-    const precioConDescuento = calcularPrecioConDescuento(priceValue,discountvalue,descuentoCoupon);
+    let precioConDescuento = calcularPrecioConDescuento(priceValue,discountvalue,descuentoCoupon);
+
+    
+    if(isNaN(priceValue) | priceValue===""){
+      priceValue=0;
+    }
+
+    if(isNaN(montoDescuento)){
+      montoDescuento=0;
+    }
+
+    if(isNaN(montoDescuentoCoupon)){
+      montoDescuentoCoupon=0;
+    }
+
+    if(isNaN(precioConDescuento)){
+      precioConDescuento=0;
+    }
 
     document.getElementById("res-precio").innerHTML ="Price : $" + priceValue+"\nDiscount : $"+montoDescuento+"\nCoupon : $"+montoDescuentoCoupon+"\nFinal Price : $"+precioConDescuento;
 

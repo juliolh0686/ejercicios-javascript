@@ -53,11 +53,20 @@ function areaCirculo(radio){
 function calcularCuadrado() {
     const input = document.getElementById("side-square");
     const value = input.value;
+
   
     const perimetro = perimetroCuadrado(value);
     const area = areaCuadrado(value);
 
-    document.getElementById("res-square").innerHTML = "Perimeter: "+perimetro + "m\nArea: "+area+" m2";
+    if(isNaN(perimetro)){
+        perimetro=0;
+    }
+
+    if(isNaN(area)){
+        perimetro=0;
+    }
+
+    document.getElementById("res-square").innerHTML = "Perimeter: "+perimetro + " m\nArea: "+area+" m2";
   }
 
   //Triangulo
@@ -68,11 +77,23 @@ function calcularCuadrado() {
     const base = parseInt(document.getElementById("base-triangle").value);
     const altura = parseInt(document.getElementById("height-triangle").value);
 
-    const resperimetroTriangulo = perimetroTriangulo(lado01,lado02,base);
-    const areatriangulo = areaTriangulo(base,altura);
-    const alturatriangulo = alturaTriangulo(lado01,lado02,base);
+    let resperimetroTriangulo = perimetroTriangulo(lado01,lado02,base);
+    let areatriangulo = areaTriangulo(base,altura);
+    let alturatriangulo = alturaTriangulo(lado01,lado02,base);
 
-    document.getElementById("res-triangle").innerHTML = "Perimeter : "+resperimetroTriangulo+"\nArea : "+areatriangulo+"\nHeight : "+alturatriangulo;
+    if(isNaN(resperimetroTriangulo)){
+        resperimetroTriangulo=0;
+    }
+
+    if(isNaN(areatriangulo)){
+        areatriangulo=0;
+    }
+
+    if(isNaN(alturatriangulo)){
+        alturatriangulo=0;
+    }
+
+    document.getElementById("res-triangle").innerHTML = "Perimeter : "+resperimetroTriangulo+" m\nArea : "+areatriangulo+" m2\nHeight : "+alturatriangulo.toFixed(4)+" m";
   }
   
   //Circulo
@@ -80,9 +101,21 @@ function calcularCuadrado() {
   function calcularcirculo() {
     const radio = parseInt(document.getElementById("radio-circle").value);
 
-    const resdiametrocirculo = diametroCirculo(radio);
-    const resperimetrocirculo = perimetroCirculo(radio);
-    const areacirculo = areaCirculo(radio);
+    let resdiametrocirculo = diametroCirculo(radio);
+    let resperimetrocirculo = perimetroCirculo(radio);
+    let areacirculo = areaCirculo(radio);
+
+    if(isNaN(resdiametrocirculo)){
+        resdiametrocirculo=0;
+    }
+
+    if(isNaN(resperimetrocirculo)){
+        resperimetrocirculo=0;
+    }
+
+    if(isNaN(areacirculo)){
+        areacirculo=0;
+    }
 
     document.getElementById("res-circle").innerHTML = "Diameter: "+resdiametrocirculo+"\nPerimeter : "+resperimetrocirculo.toFixed(4)+"\nArea : "+areacirculo.toFixed(4);
   }
