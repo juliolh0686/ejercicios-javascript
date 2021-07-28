@@ -9,6 +9,8 @@
 -Tercer paso: Crear funciones
 -Cuarto paso: Integrar JS con HTML
 
+![Home](https://raw.githubusercontent.com/juliolh0686/ejercicios-javascript/main/geometric.jpg)
+
 ## Taller #2: Porcentajes y descuentos
 
 -Primer paso: Definir las formulas
@@ -16,12 +18,25 @@
 -Tercer paso: Crear funciones
 -Cuarto paso: Integrar JS con HTML
 
+![Home](https://raw.githubusercontent.com/juliolh0686/ejercicios-javascript/main/prices.jpg)
+
 ## Taller #3: Promedio, mediana y moda
 
 -Primer paso: Definir las formulas
 -Segundo paso: Implementar las fórmulas en JavaScript
 -Tercer paso: Crear funciones
 -Cuarto paso: Integrar JS con HTML 
+
+![Home](https://raw.githubusercontent.com/juliolh0686/ejercicios-javascript/main/average.jpg)
+
+## Taller #3: Analisis de Salario
+
+-Primer paso: Definir las formulas
+-Segundo paso: Implementar las fórmulas en JavaScript
+-Tercer paso: Crear funciones
+-Cuarto paso: Integrar JS con HTML 
+
+![Home](https://raw.githubusercontent.com/juliolh0686/ejercicios-javascript/main/Salary.jpg)
 
 #DEMO
 
