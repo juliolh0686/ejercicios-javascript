@@ -1,4 +1,4 @@
-# ejercicios-javascript
+# Ejercicios-javascript
 
 ![Home](https://raw.githubusercontent.com/juliolh0686/ejercicios-javascript/main/home.jpg)
 
@@ -29,7 +29,7 @@
 
 ![Home](https://raw.githubusercontent.com/juliolh0686/ejercicios-javascript/main/average.jpg)
 
-## Taller #3: Analisis de Salario
+## Taller #4: Analisis de Salario
 
 -Primer paso: Definir las formulas
 -Segundo paso: Implementar las fórmulas en JavaScript
