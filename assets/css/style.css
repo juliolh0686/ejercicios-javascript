@@ -15,6 +15,10 @@ body {
   font-size: 2.5rem;
 }
 
+body.dark {
+  background-color: #252526;
+}
+
 .header {
   background-color: #F9FAFC;
   -webkit-box-shadow: 0px 2px 4px 0px #D7CDCD;
@@ -33,10 +37,20 @@ body {
           align-items: center;
 }
 
+body.dark .header {
+  background-color: #333333;
+  -webkit-box-shadow: 0px 2px 4px 0px #3a3a3a;
+  box-shadow: 0px 2px 4px 0px #3f3f3f;
+}
+
 .header__logo {
   text-decoration: none;
   color: #747474;
   font-weight: bold;
+}
+
+body.dark .header__logo {
+  color: white;
 }
 
 .header__menu {
@@ -63,6 +77,10 @@ body {
   transition: left 0.3s;
 }
 
+body.dark .header__menu {
+  background-color: #333333;
+}
+
 .header .menu-item {
   font-size: 1.8rem;
   margin: 0 10px;
@@ -79,11 +97,19 @@ body {
   text-decoration: none;
 }
 
+body.dark .header .menu-link {
+  color: white;
+}
+
 .header .menu-link:hover, .header .menu-link_active {
   background: none;
   background-color: #F7CB15;
   border-radius: 15px;
   padding: 10px 25px;
+}
+
+body.dark .header .menu-link:hover, body.dark .header .menu-link_active {
+  background-color: #329171;
 }
 
 .header .nav-toggle {
@@ -98,8 +124,17 @@ body {
   cursor: pointer;
 }
 
+body.dark .header .nav-toggle {
+  color: white;
+  background-color: #252526;
+}
+
 .nav-toggle:hover {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+body.dark .nav-toggle:hover {
+  background-color: rgba(225, 225, 225, 0.2);
 }
 
 .nav-menu_visible {
@@ -133,10 +168,21 @@ body {
   margin-bottom: 30px;
 }
 
+body.dark .cardform {
+  background-color: #333333;
+  -webkit-box-shadow: 0px 2px 4px 0px #3f3e3e;
+  box-shadow: 0px 2px 4px 0px #302f2f;
+  border-left: 9px solid #329171;
+}
+
 .cardform__title {
   color: #8C62AA;
   font-size: 1.8rem;
   text-align: center;
+}
+
+body.dark .cardform__title {
+  color: white;
 }
 
 .cardform__label {
@@ -146,6 +192,10 @@ body {
   font-weight: 500;
   display: block;
   margin: 15px 0;
+}
+
+body.dark .cardform__label {
+  color: white;
 }
 
 .cardform__input {
@@ -162,6 +212,10 @@ body {
 
 .cardform__input:focus {
   border: 2px solid #F7CB15;
+}
+
+body.dark .cardform__input:focus {
+  border: 2px solid #252526;
 }
 
 .cardform__button {
@@ -186,6 +240,12 @@ body {
   cursor: pointer;
 }
 
+body.dark .cardform__button {
+  background-color: #252526;
+  border: solid 2px #333333;
+  color: white;
+}
+
 .cardform__button i {
   font-size: 25px;
 }
@@ -200,9 +260,19 @@ body {
   background-color: #8C62AA;
 }
 
+body.dark .cardform__button:hover {
+  background-color: #333333;
+  border: solid 2px #252526;
+}
+
 .cardform__button:active {
   background-color: #F7CB15;
   color: #8C62AA;
+}
+
+body.dark .cardform__button:active {
+  background-color: #252526;
+  border: solid 2px #333333;
 }
 
 .cardform__resultado {
@@ -233,6 +303,10 @@ body {
   width: 100%;
 }
 
+body.dark .footer {
+  background-color: #333333;
+}
+
 .footer__logo {
   color: #8C62AA;
   font-size: 1.5rem;
@@ -240,9 +314,17 @@ body {
   font-weight: 700;
 }
 
+body.dark .footer__logo {
+  color: white;
+}
+
 .footer__iconos {
   color: #8C62AA;
   font-size: 30px;
+}
+
+body.dark .footer__iconos {
+  color: white;
 }
 
 .menu-right {
@@ -262,9 +344,17 @@ body {
   margin: 20px auto;
 }
 
+body.dark .encabezado {
+  background-color: #252526;
+}
+
 .encabezado h1 {
   font-size: 3rem;
   color: #8C62AA;
+}
+
+body.dark .encabezado h1 {
+  color: white;
 }
 
 .encabezado i {
@@ -295,6 +385,12 @@ body {
   cursor: pointer;
 }
 
+body.dark .button-principal {
+  background-color: #333333;
+  border: solid 2px #252526;
+  color: white;
+}
+
 .button-principal i {
   font-size: 25px;
 }
@@ -309,9 +405,19 @@ body {
   background-color: #8C62AA;
 }
 
+body.dark .button-principal:hover {
+  background-color: #252526;
+  color: white;
+}
+
 .button-principal:active {
   background-color: #F7CB15;
   color: #8C62AA;
+}
+
+body.dark .button-principal:active {
+  background-color: #252526;
+  color: white;
 }
 
 .titulo-principal {
@@ -335,14 +441,85 @@ body {
   margin-bottom: 10px;
 }
 
+body.dark .cardinfo {
+  background-color: #333333;
+}
+
 .cardinfo__title {
   font-size: 1.5rem;
   color: #8C62AA;
   margin-bottom: 20px;
 }
 
+body.dark .cardinfo__title {
+  color: #8d8a8a;
+}
+
 .cardinfo p {
   color: #949298;
+}
+
+body.dark .cardinfo p {
+  color: #8b8a8a;
+}
+
+.switch {
+  background-color: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background: orange;
+  color: #333333;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: white;
+}
+
+.button-cambio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 15px auto;
+  width: 93%;
 }
 
 @media only screen and (min-width: 900px) {
@@ -390,6 +567,9 @@ body {
     background-color: #F7CB15;
     border-radius: 15px;
   }
+  body.dark .active-menu {
+    background-color: #252526;
+  }
   .menu-right {
     display: block;
     height: 100vh;
@@ -397,10 +577,16 @@ body {
     padding: 15px 15px 15px 24px;
     background-color: white;
   }
+  body.dark .menu-right {
+    background-color: #333333;
+  }
   .menu-right__titulo {
     font-size: 3rem;
     color: #8C62AA;
     margin-top: 70px;
+  }
+  body.dark .menu-right__titulo {
+    color: white;
   }
   .menu-right__nav {
     width: 100%;
@@ -427,15 +613,25 @@ body {
     border-radius: 15px;
     color: #8C62AA;
   }
+  body.dark .menu-right__nav ul li:hover {
+    background-color: #252526;
+    color: white;
+  }
   .menu-right__nav ul li i {
     margin-right: 20px;
     color: #8C62AA;
+  }
+  body.dark .menu-right__nav ul li i {
+    color: white;
   }
   .menu-right__nav ul li a {
     display: block;
     width: 100%;
     text-decoration: none;
     color: #747474;
+  }
+  body.dark .menu-right__nav ul li a {
+    color: white;
   }
   .menu-right__copiryght {
     background-color: #F9FAFC;
@@ -454,10 +650,16 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  body.dark .menu-right__copiryght {
+    background-color: #252526;
+  }
   .menu-right__copiryght h2 {
     color: #8C62AA;
     font-size: 20px;
     margin: 15px 0;
+  }
+  body.dark .menu-right__copiryght h2 {
+    color: white;
   }
   .menu-right__copiryght--iconos {
     display: -webkit-box;
@@ -472,8 +674,14 @@ body {
     text-decoration: none;
     color: #8C62AA;
   }
+  body.dark .menu-right__copiryght--iconos a {
+    color: white;
+  }
   .menu-right__copiryght--iconos a:hover {
     color: #76BED0;
+  }
+  body.dark .menu-right__copiryght--iconos a:hover {
+    color: #727171;
   }
   .menu-right__copiryght--iconos i {
     font-size: 50px;
@@ -523,6 +731,11 @@ body {
             align-items: center;
     padding: 15px 50px;
   }
+  body.dark .encabezado {
+    background-color: #333333;
+    -webkit-box-shadow: 0px 2px 4px 0px #363636;
+    box-shadow: 0px 2px 4px 0px #313131;
+  }
   .encabezado h1 {
     text-align: left;
     font-size: 3rem;
@@ -531,6 +744,9 @@ body {
     display: block;
     font-size: 100px;
     color: #8C62AA;
+  }
+  body.dark .encabezado i {
+    color: white;
   }
   .cardinfo {
     background-color: #EEEBF2;
